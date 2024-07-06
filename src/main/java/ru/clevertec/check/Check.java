@@ -101,8 +101,7 @@ public class Check {
          } else if (isValidDiscountCard()) {
 
             discount = product.getTotalPrice() * discountPercentage / 100;
-         }
-         else {
+         } else {
             discount = 0;
          }
 
@@ -123,23 +122,19 @@ public class Check {
                  .append(discountPercentage).append("%");
       }
 
-
-
       double totalWithDiscount = Math.round((Math.round(totalPrice * 100.0) / 100.0 - Math.round(discountSum * 100.0) / 100.0) * 100.0) / 100.0;
       try {
 
-      if (totalWithDiscount > debitCardValue) {
-         throw new Exception();
+         if (totalWithDiscount > debitCardValue) {
+            throw new Exception();
+         }
 
-      }
-      }
-      catch (Exception e){
+      } catch (Exception e) {
          String error = "NOT ENOUGH MONEY";
          writeCheck(error);
          printCheck(error);
          System.exit(1);
       }
-
 
       check.append("\n").append("TOTAL PRICE;TOTAL DISCOUNT;TOTAL WITH DISCOUNT \n")
               .append(getStringFormat(totalPrice)).append("$;")
