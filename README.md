@@ -1,0 +1,2 @@
+1. Необходимо скомпилировать программу через командную строку, находясь в папке CheckRunner командой: javac  src/main/java/ru/clevertec/check/*.java
+2. После компиляции программа запускается командой: java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java id-quantity discountCard=xxxx balanceDebitCard=xxxx
