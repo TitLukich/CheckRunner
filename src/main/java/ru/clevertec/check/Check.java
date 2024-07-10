@@ -28,6 +28,7 @@ public class Check {
    private ArrayList<Product> getProductsInCheck() {
 
       ArrayList<Product> productsInCheck = new ArrayList<>();
+
       try {
          for (CheckItem checkItem : checkItems) {
 
@@ -123,17 +124,13 @@ public class Check {
       }
 
       double totalWithDiscount = Math.round((Math.round(totalPrice * 100.0) / 100.0 - Math.round(discountSum * 100.0) / 100.0) * 100.0) / 100.0;
-      try {
 
-         if (totalWithDiscount > debitCardValue) {
-            throw new Exception();
-         }
-
-      } catch (Exception e) {
+      if (totalWithDiscount > debitCardValue) {
          String error = "NOT ENOUGH MONEY";
          writeCheck(error);
          printCheck(error);
          System.exit(1);
+
       }
 
       check.append("\n").append("TOTAL PRICE;TOTAL DISCOUNT;TOTAL WITH DISCOUNT \n")
