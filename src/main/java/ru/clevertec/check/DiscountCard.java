@@ -1,10 +1,10 @@
 package main.java.ru.clevertec.check;
 
 public class DiscountCard {
-    private int id;
-    private String number;
-    private int discountPercentage;
 
+    private final int id;
+    private final String number;
+    private final int discountPercentage;
 
     public DiscountCard(int id,  String number, int discountPercentage) {
         this.id = id;
@@ -24,12 +24,4 @@ public class DiscountCard {
         return discountPercentage;
     }
 
-    @Override
-    public String toString() {
-        return "DiscountCard{" +
-                "id=" + id +
-                ", number='" + number + '\'' +
-                ", discountPercentage=" + discountPercentage +
-                '}';
-    }
 }
