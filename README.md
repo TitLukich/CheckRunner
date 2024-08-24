@@ -1,2 +1,4 @@
-1. Необходимо скомпилировать программу через командную строку, находясь в папке CheckRunner командой: javac  src/main/java/ru/clevertec/check/*.java
-2. После компиляции программа запускается командой: java -cp src ./src/main/java/ru/clevertec/check/CheckRunner.java id-quantity discountCard=xxxx balanceDebitCard=xxxx
+1. Находясь в папке CheckRunner, через командную строку создаем каталог out командой mkdir out. 
+2. Компилируем программу через командную строку: javac -d out -sourcepath src src/main/java/ru/clevertec/check/*.java src/main/java/ru/clevertec/check/CSVReader/*.java src/main/java/ru/clevertec/check/receiptCreat/*.java
+3. Переходим в папку out командой: cd out
+4. Запускаем программу командой: java main.java.ru.clevertec.check.CheckRunner id-quantity discountCard=xxxx balanceDebitCard=xxxx

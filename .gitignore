@@ -2,7 +2,9 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+!**/CheckRunner/result.csv
 
+#fixme: не вижу директории .idea в игноре. Она не должна пушиться в репозиторий
 ### Eclipse ###
 .apt_generated
 .classpath
