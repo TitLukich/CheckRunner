@@ -1,11 +1,11 @@
 package main.java.ru.clevertec.check;
 
 public class Product {
-    private int id;
-    private String name;
-    private double price;
-    private int quantity;
-    private boolean isWholesale;
+    private final int id;
+    private final String name;
+    private final double price;
+    private final int quantity;
+    private final boolean isWholesale;
 
     public Product(int id, String name, double price, int quantity, boolean wholesale) {
         this.id = id;
@@ -39,15 +39,4 @@ public class Product {
         return price * quantity;
     }
 
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", quantity=" + quantity +
-                ", isWholesale=" + isWholesale +
-                '}';
-    }
 }
